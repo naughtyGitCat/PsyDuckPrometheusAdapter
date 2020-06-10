@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>PsyDuckPrometheusAdapter</PackageId>
+    <PackageVersion>0.1</PackageVersion>
+    <Authors>psyduck007@outlook.com</Authors>
+    <Copyright>psyduck007</Copyright>
+    <Owners>psyduck007@outlook.com</Owners>
+    <PackageReleaseNotes>for develop trend warning</PackageReleaseNotes>
+    <Summary>A helper for Prometheus HTTP API</Summary>
+    <Title>A helper for Prometheus HTTP API</Title>
+    <Description>Request and Response Models, HttpClient Wrapped PrometheusAdapter</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="PsyDuckCommon" Version="0.2.8" />
+  </ItemGroup>
+</Project>
