@@ -10,10 +10,13 @@
 using System;
 namespace DBAPrometheusAdapter.Models
 {
-    public class Settings
+    public class HostPort
     {
-        public Settings()
-        {
-        }
+        public string Host { get; set; }
+        public int    Port { get; set; }
+    }
+    public class PrometheusConfig : HostPort
+    {
+        public string APIPath { get; set; }
     }
 }

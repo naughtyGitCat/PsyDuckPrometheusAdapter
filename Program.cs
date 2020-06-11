@@ -17,6 +17,7 @@ using DBAPrometheusAPI.Models;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using System.Text;
+using DBAPrometheusAdapter.Models;
 
 namespace DBAPrometheusAPI
 {
@@ -34,16 +35,15 @@ namespace DBAPrometheusAPI
     }
     public class PrometheusAdapter : IPrometheusAdapter
     {
+        private readonly ILogger _logger;
         private readonly HttpClient _httpClient;
-        private readonly ILogger<PrometheusAdapter> _logger;
-        public PrometheusAdapter(string promtheusAPIUri, HttpClient httpClient, ILogger<PrometheusAdapter> logger)
+        public PrometheusAdapter(PrometheusConfig config, HttpClient httpClient, ILogger logger)
         {
             this._logger = logger;
             this._httpClient = httpClient;
-            this._httpClient.BaseAddress = new Uri(new Uri(promtheusAPIUri), "api/v1/");
+            this._httpClient.BaseAddress = new Uri(new Uri($"http://{config.Host}:{config.Port}"), config.APIPath);
             _logger.LogDebug($"{this.GetType()} initialized");
         }
-
         public async Task<PrometheusQueryResponse<object>> FetchPrometheusMonitorData(IEnumerable<KeyValuePair<string, string>> requestData)
         {
             _logger.LogDebug($"Recieved requestData: {JsonSerializer.Serialize(requestData)}");
