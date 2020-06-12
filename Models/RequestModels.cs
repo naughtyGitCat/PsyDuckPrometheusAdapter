@@ -8,7 +8,7 @@
 //
 //
 using System;
-namespace DBAPrometheusAPI.Models
+namespace DBAPrometheusAdapter.Models
 {
     public class RequestModels
     {

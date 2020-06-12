@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json;
 
-namespace DBAPrometheusAPI.Models
+namespace DBAPrometheusAdapter.Models
 {
     /// <summary>
     /// 查询的结果

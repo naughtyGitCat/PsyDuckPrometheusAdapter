@@ -13,13 +13,12 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text.Json;
-using DBAPrometheusAPI.Models;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using System.Text;
 using DBAPrometheusAdapter.Models;
 
-namespace DBAPrometheusAPI
+namespace DBAPrometheusAdapter
 {
     /// <summary>
     /// Promethues操作服务
