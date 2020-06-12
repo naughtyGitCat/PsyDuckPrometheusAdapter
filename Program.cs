@@ -37,9 +37,30 @@ namespace DBAPrometheusAPI
     {
         private readonly ILogger _logger;
         private readonly HttpClient _httpClient;
+        /// <summary>
+        /// Initialize with ILoggerFactory
+        /// <inheritdoc cref="IPrometheusAdapter.FetchPrometheusMonitorData(IEnumerable{KeyValuePair{string, string}})"/>
+        /// </summary>
+        /// <param name="config"></param>
+        /// <param name="httpClient"></param>
+        /// <param name="logger"></param>
         public PrometheusAdapter(PrometheusConfig config, HttpClient httpClient, ILogger logger)
         {
             this._logger = logger;
+            this._httpClient = httpClient;
+            this._httpClient.BaseAddress = new Uri(new Uri($"http://{config.Host}:{config.Port}"), config.APIPath);
+            _logger.LogDebug($"{this.GetType()} initialized");
+        }
+        /// <summary>
+        /// Initialize with ILoggerFactory
+        /// <inheritdoc cref="IPrometheusAdapter.FetchPrometheusMonitorData(IEnumerable{KeyValuePair{string, string}})"/>
+        /// </summary>
+        /// <param name="config"></param>
+        /// <param name="httpClient"></param>
+        /// <param name="loggerFactory"></param>
+        public PrometheusAdapter(PrometheusConfig config, HttpClient httpClient, ILoggerFactory loggerFactory)
+        {
+            this._logger = loggerFactory.CreateLogger<PrometheusAdapter>();
             this._httpClient = httpClient;
             this._httpClient.BaseAddress = new Uri(new Uri($"http://{config.Host}:{config.Port}"), config.APIPath);
             _logger.LogDebug($"{this.GetType()} initialized");
