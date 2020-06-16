@@ -20,4 +20,7 @@ using DBAPrometheusAdapter
 
 ## About
 
-psyduck007@outlook.com ![]( https://visitor-badge.glitch.me/badge?page_id=PsyDuckPrometheusAdapter)
+psyduck007@outlook.com 
+
+![]( https://visitor-badge.glitch.me/badge?page_id=PsyDuckPrometheusAdapter)
+[![HitCount](http://hits.dwyl.com/naughtyGitCat/https://githubcom/naughtyGitCat/PsyDuckPrometheusAdapter.svg)]
