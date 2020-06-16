@@ -23,4 +23,4 @@ using DBAPrometheusAdapter
 psyduck007@outlook.com 
 
 ![]( https://visitor-badge.glitch.me/badge?page_id=PsyDuckPrometheusAdapter)
-[![HitCount](http://hits.dwyl.com/naughtyGitCat/https://githubcom/naughtyGitCat/PsyDuckPrometheusAdapter.svg)]
+[![HitCount](http://hits.dwyl.com/naughtyGitCat/https://githubcom/naughtyGitCat/PsyDuckPrometheusAdapter.svg)](http://hits.dwyl.com/naughtyGitCat/https://githubcom/naughtyGitCat/PsyDuckPrometheusAdapter)
