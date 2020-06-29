@@ -48,7 +48,7 @@ namespace DBAPrometheusAdapter
             this._logger = logger;
             this._httpClient = httpClient;
             this._httpClient.BaseAddress = new Uri(new Uri($"http://{config.Host}:{config.Port}"), config.APIPath);
-            _logger.LogDebug($"{this.GetType()} initialized");
+            _logger.LogDebug($"{GetType()} initialized");
         }
         /// <summary>
         /// Initialize with ILoggerFactory
